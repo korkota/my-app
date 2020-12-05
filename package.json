@@ -11,6 +11,7 @@
     "@types/node": "^12.19.7",
     "@types/react": "^16.14.2",
     "@types/react-dom": "^16.9.10",
+    "axios": "^0.21.0",
     "gh-pages": "^3.1.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -26,7 +27,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx src --color",
-    "format": "prettier --write src/**/*.{ts,tsx,scss,css,json}"
+    "format": "prettier --write src/**/*.{ts,tsx,scss,css,json}",
+    "api:generate": "java -jar ../openapi-generator-cli.jar generate -i https://petstore.swagger.io/v2/swagger.json -g typescript-axios -o src/api"
   },
   "browserslist": {
     "production": [
